@@ -2,7 +2,7 @@
     --union-color: #245a91;
     --union-hover: #1a4775;
     --union-pressed: #123654;
-        --confederate-color: #3b706e;
+    --confederate-color: #3b706e;
     --confederate-hover: #315d5b;
     --confederate-pressed: #541e1e;
     --page-background: #ece7d8;
@@ -378,6 +378,7 @@ footer {
     text-align: center;
 }
 
+/* Responsive adjustments */
 @media (max-width: 650px) {
     .site-header {
         padding: 24px 15px;
@@ -436,4 +437,32 @@ footer {
     .text-btn {
         transition: none;
     }
+}
+
+/* --- New: Unit image block styles (Selection & Experience pages) --- */
+
+.unit-image {
+    margin: 16px 0 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--light-panel);
+    overflow: hidden;
+}
+
+.unit-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Optional: enforce a consistent crop
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    */
+}
+
+.image-caption {
+    padding: 10px 12px;
+    color: var(--primary-brown);
+    background: rgba(0, 0, 0, 0.04);
+    font-size: 0.92rem;
+    line-height: 1.4;
 }
