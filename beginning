@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3b3226">
+    <title>Prairie Grove Interactive Battlefield Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Battle of Prairie Grove</h1>
+        <p>Enlist in your unit</p>
+    </header>
+
+    <main class="container">
+        <section class="card" id="experienceContainer">
+            <div id="startScreen">
+                <p class="screen-label">Step 1 of 2</p>
+                <h2>Choose Your Experience</h2>
+                <p class="introduction">
+                    Begin by choosing the side of the soldier you would
+                    like to follow during the Battle of Prairie Grove.
+                </p>
+
+                <div class="side-options">
+                    <button class="side-btn union-btn touch-btn" type="button" data-side="union" aria-label="Choose a Union soldier">
+                        <span class="button-symbol" aria-hidden="true">US</span>
+                        <span class="button-text">
+                            <strong>Union Army</strong>
+                            <small>Enlist with the Union</small>
+                        </span>
+                    </button>
+
+                    <button class="side-btn confederate-btn touch-btn" type="button" data-side="confederate" aria-label="Choose a Confederate soldier">
+                        <span class="button-symbol" aria-hidden="true">CS</span>
+                        <span class="button-text">
+                            <strong>Confederate Army</strong>
+                            <small>Enlist with the Confederacy</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <div id="unitScreen" class="hidden" aria-live="polite">
+                <p class="screen-label">Step 2 of 2</p>
+                <p class="side-label" id="sideLabel"></p>
+                <h2 id="unitHeading">What unit will you join?</h2>
+                <p class="unit-instructions" id="unitInstructions">
+                    
+                </p>
+                <div class="unit-list" id="unitList" aria-labelledby="unitHeading"></div>
+                <button class="secondary-btn touch-btn" id="backButton" type="button">
+                    Back to Soldier Selection
+                </button>
+            </div>
+
+            <div id="selectionScreen" class="hidden" aria-live="polite">
+                <p class="screen-label">Unit Selected</p>
+                <div class="selection-marker" aria-hidden="true">✓</div>
+                <h2>Your Experience</h2>
+                <p class="selection-summary">You selected:</p>
+                <p class="selected-side" id="selectedSide"></p>
+                <p class="selected-unit" id="selectedUnit"></p>
+                <p class="selection-message" id="selectionMessage"></p>
+                <button class="primary-btn touch-btn" id="beginButton" type="button">
+                    Begin This Experience
+                </button>
+                <button class="secondary-btn touch-btn" id="changeUnitButton" type="button">
+                    Choose a Different Unit
+                </button>
+                <button class="text-btn touch-btn" id="restartButton" type="button">
+                    Return to the Beginning
+                </button>
+            </div>
+
+            <div id="experienceScreen" class="hidden" aria-live="polite">
+                <p class="screen-label">Battlefield Experience</p>
+                <p class="side-label" id="experienceSide"></p>
+                <h2 id="experienceUnit"></h2>
+                <div class="placeholder-panel">
+                    <h3>Unit Experience Coming Next</h3>
+                    <p>
+                        Historical content, photographs, maps, audio,
+                        and battlefield tour stops for this military unit
+                        can be displayed here.
+                    </p>
+                </div>
+                <button class="secondary-btn touch-btn" id="experienceRestartButton" type="button">
+                    Explore Another Unit
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>Prairie Grove Battlefield Interactive Experience</footer>
+</body>
+</html>
